@@ -1,0 +1,15 @@
+node {
+
+    stage('git clone') {
+      git branch: 'main', url: 'https://github.com/Anibandisila0109/one.git'
+       
+    }
+    stage('init') {
+        dir ('day-2-basic-code') {
+        sh 'terraform init'
+    }  
+    }
+    stage('apply') {
+        sh 'terraform destroy -auto-approve'
+    }
+}
