@@ -21,7 +21,7 @@ variable "ami" {
     for_each = toset(var.sandboxes)
    # count = length(var.sandboxes)
     tags = {
-       Name = "each.value"
+       Name = "each.value"   # for a set, each value and each.key is the same
     }
     
   }
