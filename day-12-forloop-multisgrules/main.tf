@@ -1,13 +1,13 @@
 resource "aws_instance" "web" {
     ami = "ami-033a1ebf088e56e81"
-    instance_type = "t2.micro"
+    instance_type = "t2.micro"    # change ami id for different region
     key_name = "linux"
      tags = {
         Name = "loop"
      }
   
   root_block_device {
-    volume_size = 40
+    volume_size = 40      # we can give custom value here
   }
 }
  
